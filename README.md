@@ -12,9 +12,9 @@ Here, we show how a smooth dynamics assumption and a filtering or smoothing oper
 
 The paper uses a mice tracking dataset, but this is only available on request from the original authors, so a toy coloured box tracking application is included here instead.
 
-- [Demo_data_gen.ipynb](./) shows an example of the environment used to generate data for training and testing.
-- [Demo_sampler.ipynb](./) shows an example of the sampler used to randomise the measurement order of the synthetic data.
-- [Demo_train.ipynb](./) trains a network to recognise patches centred on measurements using the proposed approach. This also includes a simple test case, and some fancy visualisations to demonstrate the learning process.
+- [Demo_data_gen.ipynb](./Demo_data_gen.ipynb) shows an example of the environment used to generate data for training and testing.
+- [Demo_sampler.ipynb](./Demo_sampler.ipynb) shows an example of the sampler used to randomise the measurement order of the synthetic data.
+- [Demo_train.ipynb](./Demo_train.ipynb) trains a network to recognise patches centred on measurements using the proposed approach. This also includes a simple test case, and some fancy visualisations to demonstrate the learning process.
 
 
 ### Limitations
