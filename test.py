@@ -54,6 +54,6 @@ for f in files:
                 x[bins_pred[i,:],torch.squeeze(bins_batch)[i,:]] = x[bins_pred[i,:],torch.squeeze(bins_batch)[i,:]] + 1
 
         np.savetxt(f[:-4]+'_result.txt',x)
-        print("Accuracy = ",100*np.sum(np.max(x,axis=1))/np.sum(x),' K =',str(K))
-
-
+        print('Results for parameters: ')
+        print(param_dict)
+        print("Accuracy = ",100*np.sum(np.max(x,axis=1))/np.sum(x),'\n')
