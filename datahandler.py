@@ -32,11 +32,12 @@ class ShuffleDataset(torch.utils.data.Dataset):
             
             idx = np.arange(self.K)
             np.random.shuffle(idx)
+            bins_batch.append(idx)
   
             meas_batch.append(torch.from_numpy(self.pos[i][idx,:]).float())
             ims_batch.append(torch.from_numpy(patches[idx,:,:]))
             original_ims = np.array(self.ims[index:index+self.l])
-        return torch.from_numpy(original_ims).float(), torch.stack(ims_batch).float(), torch.stack(meas_batch).float()
+        return torch.from_numpy(original_ims).float(), torch.stack(ims_batch).float(), torch.stack(meas_batch).float(), torch.from_numpy(np.array(bins_batch))
 
     def __len__(self):
         return len(self.ims)-self.l
