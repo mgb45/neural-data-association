@@ -16,6 +16,12 @@ The paper uses a mice tracking dataset, but this is only available on request fr
 - [Demo_sampler.ipynb](./Demo_sampler.ipynb) shows an example of the sampler used to randomise the measurement order of the synthetic data.
 - [Demo_train.ipynb](./Demo_train.ipynb) trains a network to recognise patches centred on measurements using the proposed approach. This also includes a simple test case, and some fancy visualisations to demonstrate the learning process.
 
+For parameter sweeps, create a logs folder and use 
+
+    python3 train.py -K 4 -pd 10 -ssl 50 -batch_size 8 -epochs 5 -sigR 5 -sigInit 300 -lr 1e-3
+    python3 test.py
+
+The train script dumps a model state dict and parameter set in a './logs' folder. The test script produces accuracy results for each trained model, along with 'confusion' matrices showing association between actual labels and those learned. 
 
 ### Limitations
 
