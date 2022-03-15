@@ -21,7 +21,7 @@ For parameter sweeps, create a logs folder and use
     python3 train.py -K 4 -pd 10 -ssl 50 -batch_size 8 -epochs 5 -sigR 5 -sigInit 300 -lr 1e-3
     python3 test.py
 
-The test script produces accuracy results for each trained model, along with 'confusion' matrices showing association between actual labels and those learned. 
+The train script dumps a model state dict and parameter set in a './logs' folder. The test script produces accuracy results for each trained model, along with 'confusion' matrices showing association between actual labels and those learned. 
 
 ### Limitations
 
