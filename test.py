@@ -2,9 +2,9 @@ import torch
 import numpy as np
 import random
 
-# random.seed(0)
-# torch.manual_seed(0)
-# np.random.seed(0)
+random.seed(0)
+torch.manual_seed(0)
+np.random.seed(0)
 
 import csv
 import glob
